@@ -1,0 +1,58 @@
+###
+POST http://localhost:3000/api/v1/buys/shopping HTTP/1.1
+Content-Type: application/json
+
+{
+    "language": "frances",
+    "name": "La foret",
+    "awards": {
+        "cantAwards": 4,
+        "nameAwards": ["mejor vestuario","mejor actuacion"]
+    },    
+    "info": {
+        
+        "genre": "Suspenso",
+        "general": {
+            "director": "Pepito",
+            "music": "juls bois",
+            "numSeasons": 2
+        }
+    }
+
+}
+
+###
+GET http://localhost:3000/api/v1/buys HTTP/1.1
+
+
+
+###
+GET http://localhost:3000/api/v1/buys/62333c50688e7430092b400e HTTP/1.1
+
+###
+GET http://localhost:3000/api/v1/buys/otra/Pepito HTTP/1.1
+
+###
+GET http://localhost:3000/api/v1/buys/filter/2 HTTP/1.1
+###
+PUT http://localhost:3000/api/v1/buys/62333c50688e7430092b400e HTTP/1.1
+Content-Type: application/json
+
+{
+"awards": {
+        "cantAwards": 4,
+        "nameAwards": ["mejor vestuario","mejor actuacion","otro"]
+    },
+     "info": {
+        
+        "genre": "Suspenso",
+        "general": {
+            "director": "Pepito perez",
+            "music": "juls bois",
+            "numSeasons": 6
+        }
+    }
+
+}
+###
+DELETE http://localhost:3000/api/v1/buys/62333c50688e7430092b400e HTTP/1.1
